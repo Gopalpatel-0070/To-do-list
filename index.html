@@ -112,11 +112,11 @@
     <thead>
       <tr>
         <th>Date</th>
-        <th>Quant Math</th>
-        <th>Reasoning</th>
-        <th>English</th>
-        <th>GA/GS/BA</th>
-        <th>Computer</th>
+        <th>College</th>
+        <th>Java/DSA</th>
+        <th>Aptitude</th>
+        <th>WebDev</th>
+        
       </tr>
     </thead>
     <tbody id="tableBody"></tbody>
@@ -132,7 +132,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const subjects = ["Quant Math", "Reasoning", "English", "GA/GS/BA", "Computer"];
+      const subjects = ["College", "Java/DSA", "Aptitude", "WebDev"];
       const tableBody = document.getElementById("tableBody");
       const monthSelector = document.getElementById("monthSelector");
       const today = new Date();
@@ -193,12 +193,11 @@
 
       function calculateProgress(year, month) {
         const progress = {
-          "Quant Math": 0,
-          "Reasoning": 0,
-          "English": 0,
-          "GA/GS/BA": 0,
-          "Computer": 0
-        };
+          "College": 0,
+          "Java/DSA": 0,
+          "Aptitude": 0,
+          "WebDev": 0
+           };
         const daysInMonth = new Date(year, month + 1, 0).getDate();
         for (let date = 1; date <= daysInMonth; date++) {
           const key = `${year}-${month + 1}-${date}`;
@@ -229,7 +228,7 @@
               datasets: [{
                 label: "Days Completed",
                 data: data,
-                backgroundColor: ["#36a2eb", "#4bc0c0", "#9966ff", "#ff6384", "#ff9f40"]
+                backgroundColor: ["#36a2eb", "#4bc0c0", "#9966ff", "#ff6384"]
               }]
             },
             options: {
